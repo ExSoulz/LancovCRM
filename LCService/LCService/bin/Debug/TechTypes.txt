@@ -1,0 +1,4 @@
+Laptop
+CellPhone
+Tablet PC
+PC
