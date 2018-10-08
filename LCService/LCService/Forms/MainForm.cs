@@ -36,6 +36,7 @@ namespace LCService.Forms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            this.Text = "Сервисный центр 1";
             label4.Text = "Переведено с диагностики  на перезвон сегодня: " + msql.TransferMissedDiagnostic();
             SetRecords();
             SetUntergeted();
