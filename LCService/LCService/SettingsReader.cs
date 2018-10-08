@@ -11,6 +11,7 @@ namespace LCService
     {
         public static List<string> Brands = new List<string>();
         public static List<string> TechTypes = new List<string>();
+        public static string SCCode;
 
         public static void Load()
         {
@@ -29,6 +30,16 @@ namespace LCService
             }
 
             sr.Close();
+
+            sr = new StreamReader(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SCHash.txt"));
+            while (!sr.EndOfStream)
+            {
+                SCCode = sr.ReadLine().ToString();
+            }
+
+            sr.Close();
+
+
         }
     }
 }

@@ -9,3 +9,5 @@ LCService/.vs/LCService/v15/.suo
 *.exe
 *.pdb
 LCService/LCService/obj/Debug/LCService.csproj.FileListAbsolute.txt
+*.exe
+*.pdb

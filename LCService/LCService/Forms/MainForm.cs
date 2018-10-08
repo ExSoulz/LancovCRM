@@ -36,7 +36,8 @@ namespace LCService.Forms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            this.Text = "Сервисный центр 1";
+            
+            this.Text = "Сервисный центр 2";
             label4.Text = "Переведено с диагностики  на перезвон сегодня: " + msql.TransferMissedDiagnostic();
             SetRecords();
             SetUntergeted();
@@ -44,7 +45,16 @@ namespace LCService.Forms
             SetAllRecieved();
             SetRecallsToday();
             UpdateLabels();
+            MessageBox.Show(GetSC());
             
+        }
+
+        private string GetSC()
+        {
+            string code = SettingsReader.SCCode;
+            if (code == "143861FAE8930E0841AFD6C19DDCA2389C91530C8839044AE1A3694AC49FBF1F") return "SC1";
+            if (code == "E5547E6C4B47B3ED741C29B0B7800C13ACC8257EFCD6B8DB796BFFFFA5293B53") return "SC2";
+            else return "kek";
         }
 
         private void button1_Click(object sender, EventArgs e)
